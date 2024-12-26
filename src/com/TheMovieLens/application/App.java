@@ -2,7 +2,6 @@ package com.TheMovieLens.application;
 
 import com.TheMovieLens.connection.Connection;
 import com.TheMovieLens.connection.Conversion;
-import com.TheMovieLens.dto.MoviesDto;
 import com.TheMovieLens.models.APITreatment;
 
 public class App {
@@ -17,10 +16,9 @@ public class App {
 
         String jsonMoviesDto = Conversion.conversionToJson(TreatmentFieldsMovies);
         System.out.println(jsonMoviesDto);
-        
-        //Converter a string obtida da API JSON para um JsonArray
-        //JsonArray jsonArray = JsonParser.parseString(json).getAsJsonArray();
 
+        //Metodo para imprimir apenas os titulos dos filmes mais populares
+        TreatmentFieldsMovies.titleList();
 
     }
 }

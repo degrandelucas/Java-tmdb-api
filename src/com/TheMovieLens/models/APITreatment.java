@@ -12,6 +12,13 @@ public class APITreatment {
         this.results = results;
     }
 
+    public void titleList(){
+        System.out.println("Lista de títulos:");
+        for (MoviesDto movie : results) {
+            System.out.println(movie.title());
+        }
+    }
+
     @Override
     public String toString() {
         return "APITreatment{" +
