@@ -19,6 +19,13 @@ public class APITreatment {
         }
     }
 
+    public void posterUrl(){
+        System.out.println("Lista dos posters:");
+        for (MoviesDto posters : results) {
+            System.out.println(posters.poster_path());
+        }
+    }
+
     @Override
     public String toString() {
         return "APITreatment{" +

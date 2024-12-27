@@ -20,5 +20,8 @@ public class App {
         //Metodo para imprimir apenas os titulos dos filmes mais populares
         TreatmentFieldsMovies.titleList();
 
+        //Metodo para imprimir apenas o caminho dos posters dos filmes mais populares
+        TreatmentFieldsMovies.posterUrl();
+
     }
 }
