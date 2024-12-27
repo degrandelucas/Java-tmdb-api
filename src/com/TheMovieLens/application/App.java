@@ -18,10 +18,17 @@ public class App {
         System.out.println(jsonMoviesDto);
 
         //Metodo para imprimir apenas os titulos dos filmes mais populares
-        TreatmentFieldsMovies.titleList();
+        // TreatmentFieldsMovies.titleList();
 
         //Metodo para imprimir apenas o caminho dos posters dos filmes mais populares
-        TreatmentFieldsMovies.posterUrl();
+       //  TreatmentFieldsMovies.posterUrl();
+
+        TreatmentFieldsMovies.setTitleListMovies();
+        TreatmentFieldsMovies.setPosterListURL();
+
+        System.out.println(TreatmentFieldsMovies.getTitleListMovies());
+        System.out.println(TreatmentFieldsMovies.getPosterListURL());
+
 
     }
 }
