@@ -8,8 +8,18 @@ import java.util.List;
 public class APITreatment {
     private int page;
     private List<Movie> results; //results e o nome do array de resultados dos filmes na API
-    private List<String> titleListMovies = new ArrayList<>();
-    private List<String> posterListURL = new ArrayList<>();
+
+    public int getPage() {
+        return page;
+    }
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public List<Movie> getResults() {
+        return results;
+    }
 
     public void setResults(List<Movie> results) {
         this.results = results;
@@ -17,16 +27,16 @@ public class APITreatment {
 
     // Metodos para obter os titulos e os caminhos dos posteres, substituindo os metodos criados com forEach
     public List<String> getTitles() {
-        return results.stream().map(Movie::title).toList();  // Extrai os títulos dos filmes
+        return results.stream().map(Movie::title).toList();
     }
 
     public List<String> getPosterPaths() {
-        return results.stream().map(Movie::posterPath).toList();  // Extrai os caminhos dos pôsteres
+        return results.stream().map(Movie::posterPath).toList();
     }
 
     @Override
     public String toString() {
-        return "APITreatment{" +
+        return "Movie Lens: {" +
                 "page=" + page +
                 ", movies=" + results +
                 '}';

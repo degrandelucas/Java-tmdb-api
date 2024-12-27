@@ -17,18 +17,26 @@ public class App {
         String jsonMoviesDto = Conversion.conversionToJson(TreatmentFieldsMovies);
         System.out.println(jsonMoviesDto);
 
-        //Metodo para imprimir apenas os titulos dos filmes mais populares
-        // TreatmentFieldsMovies.titleList();
+        // Exibicao dos titulos e URLs dos posteres
+        System.out.println("\nTítulos dos Filmes:");
+        TreatmentFieldsMovies.getTitles().forEach(System.out::println);
 
-        //Metodo para imprimir apenas o caminho dos posters dos filmes mais populares
-       //  TreatmentFieldsMovies.posterUrl();
+        System.out.println("\nCaminhos dos Pôsteres:");
+        TreatmentFieldsMovies.getPosterPaths().forEach(System.out::println);
+
+
+        /*
+        Metodo para imprimir apenas os titulos dos filmes mais populares
+        TreatmentFieldsMovies.titleList();
+
+        Metodo para imprimir apenas o caminho dos posters dos filmes mais populares
+       TreatmentFieldsMovies.posterUrl();
 
         TreatmentFieldsMovies.setTitleListMovies();
         TreatmentFieldsMovies.setPosterListURL();
 
         System.out.println(TreatmentFieldsMovies.getTitleListMovies());
         System.out.println(TreatmentFieldsMovies.getPosterListURL());
-
-
+        */
     }
 }
