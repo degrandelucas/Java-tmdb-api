@@ -25,18 +25,5 @@ public class App {
         TreatmentFieldsMovies.getPosterPaths().forEach(System.out::println);
 
 
-        /*
-        Metodo para imprimir apenas os titulos dos filmes mais populares
-        TreatmentFieldsMovies.titleList();
-
-        Metodo para imprimir apenas o caminho dos posters dos filmes mais populares
-       TreatmentFieldsMovies.posterUrl();
-
-        TreatmentFieldsMovies.setTitleListMovies();
-        TreatmentFieldsMovies.setPosterListURL();
-
-        System.out.println(TreatmentFieldsMovies.getTitleListMovies());
-        System.out.println(TreatmentFieldsMovies.getPosterListURL());
-        */
     }
 }
