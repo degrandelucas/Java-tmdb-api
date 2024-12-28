@@ -3,6 +3,7 @@ package com.TheMovieLens.web;
 import com.TheMovieLens.models.APITreatment;
 
 import java.io.PrintWriter;
+import java.util.List;
 
 public class HTMLGenerator {
     private PrintWriter writer;
@@ -11,6 +12,34 @@ public class HTMLGenerator {
         this.writer = writer;
     }
 
+    //metodo para gerar o html
     public void generateHtml(APITreatment apiTreatment) {
+        // Lista de titulos, posteres, notas e anos dos filmes
+        List<String> titles = apiTreatment.getTitles();
+        List<String> posterPaths = apiTreatment.getPosterPaths();
+        List<Double> votes = apiTreatment.getVoteAverage();
+        List<Integer> year = apiTreatment.getReleaseYear();
+
+        // Cabecalho do HTML
+        writer.println("<html>");
+        writer.println("<head>");
+        writer.println("<title>Filmes Populares</title>");
+        writer.println("</head>");
+        writer.println("<body>");
+        writer.println("<h1>Filmes Mais Populares</h1>");
+
+        // Adiciona os filmes ao HTML
+        for (int i = 0; i < titles.size(); i++) {
+            writer.println("<div style='margin-bottom: 20px;'>");
+            writer.println("<h2>" + titles.get(i) + "</h2>");
+            writer.println("<img src='" + posterPaths.get(i) + "' alt='Poster' style='width:200px;'>");
+            writer.println("<p><strong>Nota:</strong> " + votes.get(i) + "</p>");
+            writer.println("<p><strong>Ano:</strong> " + year.get(i) + "</p>");
+            writer.println("</div>");
+        }
+
+        // Fechamento do HTML
+        writer.println("</body>");
+        writer.println("</html>");
     }
 }

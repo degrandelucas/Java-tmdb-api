@@ -9,7 +9,7 @@ public record Movie(
         @SerializedName("vote_average") double voteAverage,
         int releaseYear // Este é calculado, entao nao precisa do mapeamento
 ) {
-    public Movie(String title, String originalTitle, String posterPath, double voteAverage, String releaseDate) {
+    public Movie(String title, String originalTitle, String posterPath, double voteAverage, String  releaseDate) {
         this(
                 title,
                 originalTitle,

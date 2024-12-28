@@ -34,6 +34,15 @@ public class APITreatment {
         return results.stream().map(Movie::posterPath).toList();
     }
 
+    public List<Double> getVoteAverage() {
+        return results.stream().map(Movie::voteAverage).toList();
+    }
+
+    public List<Integer> getReleaseYear() {
+        return results.stream().map(Movie::releaseYear).toList();
+    }
+
+
     @Override
     public String toString() {
         return "Movie Lens: {" +
