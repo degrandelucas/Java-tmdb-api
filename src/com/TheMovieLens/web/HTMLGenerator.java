@@ -32,7 +32,7 @@ public class HTMLGenerator {
         for (int i = 0; i < titles.size(); i++) {
             writer.println("<div style='margin-bottom: 20px;'>");
             writer.println("<h2>" + titles.get(i) + "</h2>");
-            writer.println("<img src='" + posterPaths.get(i) + "' alt='Poster' style='width:200px;'>");
+            writer.println("<img src='https://image.tmdb.org/t/p/w200" + posterPaths.get(i) + "' alt='Poster' style='width:200px;'>");
             writer.println("<p><strong>Nota:</strong> " + votes.get(i) + "</p>");
             writer.println("<p><strong>Ano:</strong> " + year.get(i) + "</p>");
             writer.println("</div>");
