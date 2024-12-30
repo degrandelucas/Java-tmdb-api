@@ -38,8 +38,8 @@ public class APITreatment {
         return results.stream().map(Movie::voteAverage).toList();
     }
 
-    public List<Integer> getReleaseYear() {
-        return results.stream().map(Movie::releaseYear).toList();
+    public List<String> getReleaseYear() {
+        return results.stream().map(Movie::releaseDate).toList();
     }
 
 

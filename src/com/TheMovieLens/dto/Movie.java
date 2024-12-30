@@ -7,15 +7,14 @@ public record Movie(
         @SerializedName("original_title") String originalTitle,
         @SerializedName("poster_path") String posterPath,
         @SerializedName("vote_average") double voteAverage,
-        int releaseYear // Este é calculado, entao nao precisa do mapeamento
+        @SerializedName("release_date") String releaseDate // Este é calculado, entao nao precisa do mapeamento
 ) {
-    public Movie(String title, String originalTitle, String posterPath, double voteAverage, String  releaseDate) {
-        this(
-                title,
-                originalTitle,
-                posterPath,
-                voteAverage,
-                Integer.parseInt(releaseDate.substring(0, 4))
-        );
+    public Movie(String title, String originalTitle, String posterPath, double voteAverage, String releaseDate) {
+        this.title = title;
+        this.posterPath = posterPath;
+        this.originalTitle = originalTitle;
+        this.voteAverage = voteAverage;
+        this.releaseDate = releaseDate.substring(0,4);
+
     }
 }

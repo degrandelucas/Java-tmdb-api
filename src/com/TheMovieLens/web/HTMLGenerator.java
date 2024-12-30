@@ -18,7 +18,7 @@ public class HTMLGenerator {
         List<String> titles = apiTreatment.getTitles();
         List<String> posterPaths = apiTreatment.getPosterPaths();
         List<Double> votes = apiTreatment.getVoteAverage();
-        List<Integer> year = apiTreatment.getReleaseYear();
+        List<String> year = apiTreatment.getReleaseYear();
 
         // Cabecalho do HTML
         writer.println("<html>");
