@@ -42,11 +42,11 @@ public class HTMLGenerator {
         for (int i = 0; i < titles.size(); i++) {
 
             String movieTemplate = """
-                    <div style='margin-bottom: 20px;'>
-                    <h2> %s </h2>
-                    <img src='https://image.tmdb.org/t/p/w200%s alt='Poster' style='width:200px;'>
-                    <p><strong>Nota:</strong>  %.1f </p>
-                    <p><strong>Ano:</strong> %s </p>
+                    <div class="card text-center" style="width: 30rem; margin-bottom: 15rem;">
+                    <h2 class="card-title"> %s </h2>
+                    <img class="card-img-top card-img-center"  src='https://image.tmdb.org/t/p/w200%s alt='Poster' style='width:200px;'>
+                    <p card-text><strong>Nota:</strong>  %.1f </p>
+                    <p card-text><strong>Ano:</strong> %s </p>
                     """;
 
             writer.println(String.format(movieTemplate,
