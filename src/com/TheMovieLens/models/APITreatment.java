@@ -2,7 +2,6 @@ package com.TheMovieLens.models;
 
 import com.TheMovieLens.dto.Movie;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class APITreatment {
