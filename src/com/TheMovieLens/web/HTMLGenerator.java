@@ -33,8 +33,8 @@ public class HTMLGenerator {
                         </head>
                 """;
         writer.println(head);
-        writer.println("<body");
-        writer.println("<h1> Filmes Mais Populares</h1>");
+        writer.println("<body>");
+        writer.println("<h1 class='text-center'>Filmes Mais Populares</h1>");
 
         // Adiciona os filmes ao HTML
         for (int i = 0; i < titles.size(); i++) {
