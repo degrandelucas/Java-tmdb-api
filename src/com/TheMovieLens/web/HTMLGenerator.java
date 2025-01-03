@@ -3,6 +3,8 @@ package com.TheMovieLens.web;
 import com.TheMovieLens.models.APITreatment;
 
 import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class HTMLGenerator {
@@ -20,6 +22,10 @@ public class HTMLGenerator {
         List<Double> votes = apiTreatment.getVoteAverage();
         List<String> year = apiTreatment.getReleaseYear();
 
+        // Obtem a data do dia no formato desejado abaixo
+        LocalDate currentDate = LocalDate.now();
+        String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
         // Cabecalho do HTML
         writer.println("<html>");
         String head =
@@ -34,7 +40,7 @@ public class HTMLGenerator {
                 """;
         writer.println(head);
         writer.println("<body>");
-        writer.println("<h1 class='text-center'>Filmes Mais Populares</h1>");
+        writer.println("<h1 class='text-center'>Filmes Mais Populares em " + formattedDate + "</h1>");
 
         // Adiciona os filmes ao HTML
         for (int i = 0; i < titles.size(); i++) {
