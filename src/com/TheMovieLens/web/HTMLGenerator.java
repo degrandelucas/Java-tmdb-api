@@ -24,9 +24,17 @@ public class HTMLGenerator {
 
         // Cabecalho do HTML
         writer.println("<html>");
-        writer.println("<head>");
-        writer.println("<title>Filmes Populares</title>");
-        writer.println("</head>");
+        String head =
+                """
+                <head>
+                    <meta charset=\"utf-8\">
+                    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+                    <title>Filmes Populares</title>
+                    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" 
+                        + "integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">					
+                </head>
+                """;
+        writer.println(head);
         writer.println("<body>");
         writer.println("<h1>Filmes Mais Populares</h1>");
 
