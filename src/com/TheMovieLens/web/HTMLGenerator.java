@@ -36,8 +36,8 @@ public class HTMLGenerator {
             String movieTemplate = """
                     <div style='margin-bottom: 20px;'>
                     <h2> %s </h2>
-                    <img src='https://image.tmdb.org/t/p/w200+ %s alt='Poster' style='width:200px;'>
-                    <p><strong>Nota:</strong>  %d </p>
+                    <img src='https://image.tmdb.org/t/p/w200%s alt='Poster' style='width:200px;'>
+                    <p><strong>Nota:</strong>  %.1f </p>
                     <p><strong>Ano:</strong> %s </p>
                     """;
 
@@ -46,14 +46,6 @@ public class HTMLGenerator {
                     posterPaths.get(i),
                     votes.get(i),
                     year.get(i)));
-
-            writer.println("<div style='margin-bottom: 20px;'>");
-            writer.println("<h2>" + titles.get(i) + "</h2>");
-            writer.println("<img src='https://image.tmdb.org/t/p/w200" + posterPaths.get(i) + "' alt='Poster' style='width:200px;'>");
-            writer.println("<p><strong>Nota:</strong> " + votes.get(i) + "</p>");
-            writer.println("<p><strong>Ano:</strong> " + year.get(i) + "</p>");
-            writer.println("</div>");
-
         }
 
         // Fechamento do HTML
