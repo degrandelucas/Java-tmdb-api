@@ -33,13 +33,15 @@ public class HTMLGenerator {
         // Adiciona os filmes ao HTML
         for (int i = 0; i < titles.size(); i++) {
 
-            writer.println(format("""
+            String movieTemplate = """
                     <div style='margin-bottom: 20px;'>
                     <h2> %s </h2>
                     <img src='https://image.tmdb.org/t/p/w200+ %s alt='Poster' style='width:200px;'>
                     <p><strong>Nota:</strong>  %d </p>
                     <p><strong>Ano:</strong> %s </p>
-                    """,
+                    """;
+
+            writer.println(String.format(movieTemplate,
                     titles.get(i),
                     posterPaths.get(i),
                     votes.get(i),
