@@ -26,22 +26,25 @@ public class APITreatment implements Medias {
     }
 
     // Metodos para obter os titulos e os caminhos dos posteres, substituindo os metodos criados com forEach
+    @Override
     public List<String> getTitles() {
         return results.stream().map(Movie::title).toList();
     }
 
+    @Override
     public List<String> getPosterPaths() {
         return results.stream().map(Movie::posterPath).toList();
     }
 
+    @Override
     public List<Double> getVoteAverage() {
         return results.stream().map(Movie::voteAverage).toList();
     }
 
+    @Override
     public List<String> getReleaseYear() {
         return results.stream().map(Movie::releaseDate).toList();
     }
-
 
     @Override
     public String toString() {
