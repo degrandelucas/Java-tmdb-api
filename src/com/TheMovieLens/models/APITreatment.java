@@ -1,10 +1,11 @@
 package com.TheMovieLens.models;
 
 import com.TheMovieLens.dto.Movie;
+import com.TheMovieLens.interfaces.Medias;
 
 import java.util.List;
 
-public class APITreatment {
+public class APITreatment implements Medias {
     private int page;
     private List<Movie> results; //results e o nome do array de resultados dos filmes na API
 
