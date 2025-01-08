@@ -29,7 +29,43 @@ public class App {
         TreatmentFieldsMovies.getPosterPaths().forEach(System.out::println);
 
         // Criar um PrintWriter para escrever no arquivo
-        try (PrintWriter writer = new PrintWriter("filmesPopulares.html")) {
+        try (PrintWriter writer = new PrintWriter("FilmesPopulares.html")) {
+            // Criar uma instância de HTMLGenerator passando o PrintWriter
+            HTMLGenerator htmlGenerator = new HTMLGenerator(writer);
+
+            // Gerar o HTML
+            htmlGenerator.generateHtml(TreatmentFieldsMovies);
+            System.out.println("\nArquivo HTML gerado com sucesso!");
+        } catch (FileNotFoundException e) {
+            System.out.println("\nErro ao criar o arquivo: " + e.getMessage());
+        }
+
+        // Criar um PrintWriter para escrever no arquivo com os filmes classificado por titulo
+        try (PrintWriter writer = new PrintWriter("FilmesPopularesPotTitulo.html")) {
+            // Criar uma instância de HTMLGenerator passando o PrintWriter
+            HTMLGenerator htmlGenerator = new HTMLGenerator(writer);
+
+            // Gerar o HTML
+            htmlGenerator.generateHtml(TreatmentFieldsMovies);
+            System.out.println("\nArquivo HTML gerado com sucesso!");
+        } catch (FileNotFoundException e) {
+            System.out.println("\nErro ao criar o arquivo: " + e.getMessage());
+        }
+
+        // Criar um PrintWriter para escrever no arquivo com os filmes classificado por votos (notas dos usuarios)
+        try (PrintWriter writer = new PrintWriter("FilmesPopularesPorNotas.html")) {
+            // Criar uma instância de HTMLGenerator passando o PrintWriter
+            HTMLGenerator htmlGenerator = new HTMLGenerator(writer);
+
+            // Gerar o HTML
+            htmlGenerator.generateHtml(TreatmentFieldsMovies);
+            System.out.println("\nArquivo HTML gerado com sucesso!");
+        } catch (FileNotFoundException e) {
+            System.out.println("\nErro ao criar o arquivo: " + e.getMessage());
+        }
+
+        // Criar um PrintWriter para escrever no arquivo com os filmes classificado por ano
+        try (PrintWriter writer = new PrintWriter("FilmesPopularesPorAno.html")) {
             // Criar uma instância de HTMLGenerator passando o PrintWriter
             HTMLGenerator htmlGenerator = new HTMLGenerator(writer);
 
